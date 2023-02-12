@@ -43,11 +43,11 @@ export default function Weather() {
                         <div className="col-sm-5 current-temp">
                           <span className="city-temp">{weatherData.temp}</span>
                           <span className="index">
-                            <a className="index-links active" href="#">
+                            <a className="index-links active" href="/">
                               F°
                             </a>
                             |
-                            <a className="index-links" href="#">
+                            <a className="index-links" href="/">
                               C°
                             </a>
                           </span>
