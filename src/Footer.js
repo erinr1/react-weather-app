@@ -5,7 +5,7 @@ export default function Footer() {
     <div className="source-link">
       <a href="https://github.com/erinr1/react-weather-app" target="”_blank”">
         Open-source code
-      </a>
+      </a>{" "}
       by Erin Ramos
     </div>
   );
