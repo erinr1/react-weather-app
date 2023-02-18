@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./weather.css";
+import DisplayDate from "./DisplayDate";
 import Footer from "./Footer";
 
 export default function Weather(props) {
@@ -12,6 +13,7 @@ export default function Weather(props) {
     setLoaded(true);
     setWeatherData({
       city: props.defaultCity,
+      date: new Date(response.data.dt * 1000),
       temp: response.data.main.temp,
       description: response.data.weather[0].main,
       wind: response.data.wind.speed,
@@ -42,8 +44,10 @@ export default function Weather(props) {
 
                 <div className="current-weather">
                   <div className="row">
-                    <h4 className="current-city">{weatherData.city}</h4>
-                    <h6 className="mb-2 date-time">Wednesday Jan 4, 2023</h6>
+                    <h4 className="mt-2 current-city">{weatherData.city}</h4>
+                    <h6 className="mb-3 date-time">
+                      <DisplayDate date={weatherData.date} />
+                    </h6>
                     <div className="row">
                       <div className="col-sm-8 d-flex align-items-center current-temp">
                         <img
