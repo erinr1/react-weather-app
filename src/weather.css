@@ -45,9 +45,9 @@ input {
 }
 
 span.city-temp {
-  font-size: 55px;
-  margin-left: 25px;
+  font-size: 60px;
 }
+
 span.index {
   font-size: 18px;
   position: relative;
@@ -107,20 +107,17 @@ div.source-link {
   font-size: 10px;
 }
 
-#condition-image {
-  max-width: 12%;
-}
-#wind-icon {
+.wind-icon {
   margin-right: 5px;
   margin-left: 5px;
 }
 
-#days-icon {
+.days-icon {
   max-width: 35%;
   margin: 0 auto;
 }
 
-#hourly-icon {
+.hourly-icon {
   max-width: 75%;
   margin: 0 auto;
 }
