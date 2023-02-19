@@ -31,7 +31,7 @@ export default function UnitCoversion(props) {
       <div className="UnitConversion">
         <span className="city-temp ms-2">{Math.round(celciusTemp)}</span>
         <span className="index">
-          <a className="index-links ms-1" href="/" onClick={showFahrenheit}>
+          <a className="index-links ms-2" href="/" onClick={showFahrenheit}>
             F°
           </a>{" "}
           | C°
