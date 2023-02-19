@@ -3,7 +3,7 @@ import axios from "axios";
 import "./weather.css";
 import CurrentWeather from "./CurrentWeather";
 
-export default function Weather(props) {
+export default function Weather() {
   const [loaded, setLoaded] = useState(false);
   const [weatherData, setWeatherData] = useState({});
   const [city, setCity] = useState("New York");
@@ -77,6 +77,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return <div>"Loading...";</div>;
   }
 }

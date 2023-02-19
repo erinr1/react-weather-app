@@ -25,15 +25,8 @@ export default function DisplayDate(props) {
     mins = `0${mins}`;
   }
 
-  let am = "am";
-  if (props.date.getHours() > 11) {
-    am = "pm";
-  } else {
-    am = "am";
-  }
-
   return (
-    <div>
+    <div className="DisplayDate">
       Last Updated: {day} | {hours}:{mins}
     </div>
   );

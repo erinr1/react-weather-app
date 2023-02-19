@@ -5,7 +5,7 @@ import UnitConversion from "./UnitConversion";
 
 export default function CurrentWeather(props) {
   return (
-    <div className="current-weather">
+    <div className="currentWeather">
       <h4 className="mt-2 current-city">{props.data.city}</h4>
       <h6 className="mb-3 date-time">
         <DisplayDate date={props.data.date} />
