@@ -1,5 +1,6 @@
 import React from "react";
 import DisplayDate from "./DisplayDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function CurrentWeather(props) {
   return (
@@ -10,13 +11,9 @@ export default function CurrentWeather(props) {
       </h6>
       <div className="row">
         <div className="col-sm-8 d-flex align-items-center current-temp">
-          <img
-            src={props.data.icon}
-            alt="Weather Icon"
-            className="condition-icon"
-          />
+          <WeatherIcon code={props.data.icon} />
 
-          <span className="city-temp">{Math.round(props.data.temp)}</span>
+          <span className="city-temp ms-2">{Math.round(props.data.temp)}</span>
           <span className="index">
             <a className="index-links active" href="/">
               F°
