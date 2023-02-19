@@ -52,9 +52,8 @@ export default function Weather() {
                     autoComplete="off"
                     onChange={updateCity}
                   />
-                  <button className="mag-button">🔍</button>
-                  <button className="current-location-button">
-                    Current Location
+                  <button className="current-location-button ms-1">
+                    🔍 Search
                   </button>
                 </form>
 
