@@ -9,7 +9,6 @@ export default function Weather(props) {
   const [city, setCity] = useState("New York");
 
   function showWeather(response) {
-    console.log(response);
     setLoaded(true);
     setWeatherData({
       city: response.data.name,
@@ -32,7 +31,6 @@ export default function Weather(props) {
     const apiKey = "5354b60afda2b7800186c06153932396";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(url).then(showWeather);
-    console.log(event);
   }
 
   function updateCity(event) {
@@ -51,7 +49,7 @@ export default function Weather(props) {
                     type="text"
                     name="city"
                     placeholder="Search for a city..."
-                    autocomplete="off"
+                    autoComplete="off"
                     onChange={updateCity}
                   />
                   <button className="mag-button">🔍</button>
