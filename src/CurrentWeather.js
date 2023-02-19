@@ -1,6 +1,7 @@
 import React from "react";
 import DisplayDate from "./DisplayDate";
 import WeatherIcon from "./WeatherIcon";
+import UnitConversion from "./UnitConversion";
 
 export default function CurrentWeather(props) {
   return (
@@ -13,25 +14,12 @@ export default function CurrentWeather(props) {
         <div className="col-sm-8 d-flex align-items-center current-temp">
           <WeatherIcon code={props.data.icon} />
 
-          <span className="city-temp ms-2">{Math.round(props.data.temp)}</span>
-          <span className="index">
-            <a className="index-links active" href="/">
-              F°
-            </a>
-            |
-            <a className="index-links" href="/">
-              C°
-            </a>
-          </span>
+          <UnitConversion fahrenheit={props.data.temp} />
         </div>
 
         <div className="col-sm-4 current-precipt-info">
           <div className="row">
-            <div className="current-condition">
-              {props.data.description}
-
-              <span></span>
-            </div>
+            <div className="current-condition">{props.data.description}</div>
             <div className="current-wind">
               <span>{Math.round(props.data.wind)} 💨 </span>
               <span></span> km/h
