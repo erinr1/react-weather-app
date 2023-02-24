@@ -65,16 +65,6 @@ div.current-precipt-info {
   text-align: left;
 }
 
-div.hourlyForecast {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 200;
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #a4bcd8;
-}
-
 div.daily-forecast {
   font-size: 15px;
   font-weight: 200;

@@ -3,6 +3,7 @@ import axios from "axios";
 import "./weather.css";
 import CurrentWeather from "./CurrentWeather";
 import HourlyForecast from "./HourlyForecast";
+import DailyForecast from "./DailyForecast";
 
 export default function Weather() {
   const [loaded, setLoaded] = useState(false);
@@ -68,7 +69,7 @@ export default function Weather() {
             </div>
             <div className="col-1"></div>
             <div className="col-3 daily-forecast">
-              <div>daily forecast</div>
+              <DailyForecast />
             </div>
           </div>
         </div>
