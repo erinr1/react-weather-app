@@ -12,7 +12,7 @@ export default function CurrentWeather(props) {
       </h6>
       <div className="row">
         <div className="col-sm-8 d-flex align-items-center current-temp">
-          <WeatherIcon code={props.data.icon} />
+          <WeatherIcon code={props.data.icon} color="#142c4c" />
           <UnitConversion fahrenheit={props.data.temp} />
         </div>
 

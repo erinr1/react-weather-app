@@ -16,8 +16,8 @@ export default function DisplayDate(props) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  if (hours > 12) {
-    hours = hours - 12;
+  if (hours < 10) {
+    hours = `0${hours}`;
   }
 
   let mins = props.date.getMinutes();
