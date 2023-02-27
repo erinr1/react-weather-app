@@ -13,7 +13,7 @@ export default function ForecastDay(props) {
       "Wednesday",
       "Thursday",
       "Friday",
-      "Saturdayy",
+      "Saturday",
     ];
 
     return days[day];
