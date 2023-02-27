@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./weather.css";
 import CurrentWeather from "./CurrentWeather";
-import HourlyForecast from "./HourlyForecast";
 import DailyForecast from "./DailyForecast";
 
 export default function Weather() {
@@ -14,6 +13,7 @@ export default function Weather() {
     setLoaded(true);
     setWeatherData({
       city: response.data.name,
+      coord: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temp: response.data.main.temp,
       description: response.data.weather[0].main,
@@ -43,34 +43,28 @@ export default function Weather() {
     return (
       <div className="Weather">
         <div className="container app-container">
-          <div className="row">
-            <div className="col-8 top-left">
-              <div className="row">
-                <form onSubmit={handleSubmit}>
-                  <input
-                    type="text"
-                    name="city"
-                    placeholder="Search for a city..."
-                    autoComplete="off"
-                    onChange={updateCity}
-                  />
-                  <button className="current-location-button ms-1">
-                    🔍 Search
-                  </button>
-                </form>
+          <div className=" top-left">
+            <div className="row">
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="city"
+                  placeholder="Search for a city..."
+                  autoComplete="off"
+                  onChange={updateCity}
+                />
+                <button className="current-location-button ms-1">
+                  🔍 Search
+                </button>
+              </form>
 
-                <div className="current-weather">
-                  <div className="row">
-                    <CurrentWeather data={weatherData} />
-                  </div>
+              <div className="current-weather">
+                <div className="row">
+                  <CurrentWeather data={weatherData} />
                 </div>
               </div>
-              <HourlyForecast />
             </div>
-            <div className="col-1"></div>
-            <div className="col-3 daily-forecast">
-              <DailyForecast />
-            </div>
+            <DailyForecast coordinates={weatherData.coord} />
           </div>
         </div>
       </div>

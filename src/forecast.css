@@ -1,4 +1,4 @@
-div.hourlyForecast {
+div.DailyForecast {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
@@ -10,13 +10,6 @@ div.hourlyForecast {
   font-family: "Kanit", sans-serif;
 }
 
-div.DailyForecast {
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #a4bcd8;
-  color: #142c4c;
-  font-family: "Kanit", sans-serif;
+.minTemp {
+  opacity: 0.6;
 }
